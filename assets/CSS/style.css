@@ -33,7 +33,7 @@ body{
     gap: 1vw;
 }
 .container .btn{
-    padding: 2vh 1.2vw;
+    padding: 2vh 2vw;
     border-radius: 2vh;
     background-color: var(--prim-col);
     color: var(--seco-col);
@@ -49,15 +49,34 @@ body{
     border: 0.5vh solid var(--prim-col);
 }
 
+
+@media (max-width : 900px) {
+    .container .btn{
+        padding: 2vh 2.5vw;
+    }
+    
+}
+
+@media (max-width : 800px) and (min-width : 600px) {
+    .container .btn{
+        padding: 2vh 3vw;
+    }
+    .container .screen{
+        font-size: x-large;
+    }
+}
 @media (max-width : 600px) {
     .container{
         gap: 10vh;
+    }
+    .container .screen{
+        font-size: x-large;
     }
     .container .btns{
         gap: 2vw;
     }
     .container .btn{
-    padding: 2vh 2vw;
+    padding: 2vh 4vw;
 
     }
 }

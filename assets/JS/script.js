@@ -8,6 +8,7 @@ let reset = document.querySelector('#reset')
 let msecs = 0;
 let secs = 0;
 let mins = 0;
+let hrs = 0;
 
 let timer = null
 function startCount(){
@@ -18,13 +19,20 @@ function startCount(){
         if(secs == 60){
             secs = 0;
             mins++
+        
+        if(mins == 60){
+            mins = 0;
+            hrs++;
         }
     }
+    }
+    
 
     let msecStr = msecs < 10 ? `0${msecs}`:`${msecs}` ;
     let secStr = secs < 10 ? `0${secs}`:`${secs}` ;
     let minStr = mins < 10 ? `0${mins}`:`${mins}` ;
-    screen.innerText = `${minStr} : ${secStr} : ${msecStr}`
+    let hrStr = hrs < 10 ? `0${hrs}`:`${hrs}`;
+    screen.innerText = `${hrStr} : ${minStr} : ${secStr} : ${msecStr}`
 }
 
 start.addEventListener('click',()=>{
@@ -39,8 +47,9 @@ stop.addEventListener('click',()=>{
 })
 reset.addEventListener('click',()=>{
     clearInterval(timer)
-    screen.innerText = `00 : 00 : 00`
+    screen.innerText = `00 : 00 : 00 : 00`
     msecs = 0
     secs = 0
     mins = 0
+    hrs =0 
 })
