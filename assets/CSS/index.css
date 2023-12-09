@@ -1,0 +1,20 @@
+:root{
+    --prim-col : #343a40;
+    --seco-col : #adb5bd;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    
+    
+    
+.flex-col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
